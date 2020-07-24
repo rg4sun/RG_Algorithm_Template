@@ -27,7 +27,9 @@ void swap(double& a, double& b)
 	b = a;
 }
 
-void selectSort(int a[], int len, bool reverse = false) {// reverse默认为false，升序排序
+// 不能重新定义默认参数。 如果需要参数的其他值，则应将默认参数留空。
+// 也就是在 头文件中 定义了默认参数，实现文件中 该默认参数留空
+void selectSort(int a[], int len, bool reverse) {// reverse默认为false，升序排序
 	for (int i = 0; i < len; i++) {// len趟操作
 		int k = i;// k记录i位置后续序列中的max值下标，初始置为i
 		for (int j = i; j < len; j++) {
@@ -40,7 +42,10 @@ void selectSort(int a[], int len, bool reverse = false) {// reverse默认为false，
 					k = j;
 			}
 		}
-		swap(a[i], a[k]);
+		/*swap(a[i], a[k]);*/// 用这个会出错，还在找原因
+		int tmp = a[i];
+		a[i] = a[k];
+		a[k] = tmp;
 	}
 
 }

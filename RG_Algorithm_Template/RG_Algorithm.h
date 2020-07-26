@@ -8,4 +8,4 @@ void swap(float& a, float& b);
 void swap(double& a, double& b);
 
 void selectSort(int a[], int len, bool reverse = false);
-
+void insertSort(int a[], int len, bool reverse = false);

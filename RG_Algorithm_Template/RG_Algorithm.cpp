@@ -49,3 +49,7 @@ void selectSort(int a[], int len, bool reverse) {// reverseÄ¬ÈÏÎªfalse£¬ÉýÐòÅÅÐò
 	}
 
 }
+
+void insertSort(int a[], int len, bool reverse)
+{
+}

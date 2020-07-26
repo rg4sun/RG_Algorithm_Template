@@ -7,20 +7,20 @@ void showArray(int a[], int len) {
 	printf("\n");
 }
 
-void swap(int& a, int& b) {
+void mySwap(int& a, int& b) {
 	int tmp = a;
 	a = b;
 	b = a;
 }
 
-void swap(float& a, float& b)
+void mySwap(float& a, float& b)
 {
 	float tmp = a;
 	a = b;
 	b = a;
 }
 
-void swap(double& a, double& b)
+void mySwap(double& a, double& b)
 {
 	double tmp = a;
 	a = b;
@@ -42,14 +42,16 @@ void selectSort(int a[], int len, bool reverse) {// reverse默认为false，升序排序
 					k = j;
 			}
 		}
-		/*swap(a[i], a[k]);*/// 用这个会出错，还在找原因
-		int tmp = a[i];
+		/*swap(a[i], a[k]);*/// 用这个会出错，还在找原因，因该是和c++自带的同名函数撞了
+		mySwap(a[i], a[k]);
+		/*int tmp = a[i];
 		a[i] = a[k];
-		a[k] = tmp;
+		a[k] = tmp;*/
 	}
 
 }
 
 void insertSort(int a[], int len, bool reverse)
 {
+
 }

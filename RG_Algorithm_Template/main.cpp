@@ -11,12 +11,13 @@ void selectSortTest() {
 }
 
 int main() {
-	int a = 123, b = 345;
-	int aa[2] = { 123,456 };
-	
-	cout << a << " " << b << endl;
-	cout << aa[0] << " " << aa[1] << endl;
-
+	//int a = 123, b = 345;
+	//int aa[2] = { 123,456 };
+	//swap(a, b);
+	//cout << a << " " << b << endl;
+	//swap(aa[0], aa[1]);
+	//cout << aa[0] << " " << aa[1] << endl;
+	selectSortTest();
 
 	return 0;
 }

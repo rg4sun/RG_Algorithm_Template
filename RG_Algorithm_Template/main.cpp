@@ -10,14 +10,15 @@ void selectSortTest() {
 	showArray(a, 7);
 }
 
+void insertSortTest() {
+	int a[7] = { 7,131,1445,132,90,99,1 };
+	insertSort(a, 7, true);
+	showArray(a, 7);
+}
+
 int main() {
-	//int a = 123, b = 345;
-	//int aa[2] = { 123,456 };
-	//swap(a, b);
-	//cout << a << " " << b << endl;
-	//swap(aa[0], aa[1]);
-	//cout << aa[0] << " " << aa[1] << endl;
-	selectSortTest();
+	//selectSort();
+	insertSortTest();
 
 	return 0;
 }

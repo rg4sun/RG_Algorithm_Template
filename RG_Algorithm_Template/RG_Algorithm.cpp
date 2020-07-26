@@ -57,5 +57,18 @@ void selectSort(int a[], int len, bool reverse) {// reverse默认为false，升序排序
 
 void insertSort(int a[], int len, bool reverse)
 {
-
+	for (int i = 1; i < len; i++) {
+		int j = i + 1, tmp = a[i]; // 先i+1是为了 用--j
+		if (reverse) {
+			while (--j && tmp > a[j - 1]) {
+				a[j] = a[j - 1]; // i前面的，j后面的整体后移
+			}
+		}
+		else {
+			while (--j && tmp < a[j - 1]) {
+				a[j] = a[j - 1];
+			}
+		}
+		a[j] = tmp;
+	}
 }

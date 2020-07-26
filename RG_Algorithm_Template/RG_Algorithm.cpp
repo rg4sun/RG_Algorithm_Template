@@ -7,24 +7,24 @@ void showArray(int a[], int len) {
 	printf("\n");
 }
 
-void mySwap(int& a, int& b) {
+void swap(int& a, int& b) {
 	int tmp = a;
 	a = b;
-	b = a;
+	b = tmp;
 }
 
 void mySwap(float& a, float& b)
 {
 	float tmp = a;
 	a = b;
-	b = a;
+	b = tmp;
 }
 
 void mySwap(double& a, double& b)
 {
 	double tmp = a;
 	a = b;
-	b = a;
+	b = tmp;
 }
 
 // 不能重新定义默认参数。 如果需要参数的其他值，则应将默认参数留空。
@@ -42,8 +42,12 @@ void selectSort(int a[], int len, bool reverse) {// reverse默认为false，升序排序
 					k = j;
 			}
 		}
-		//swap(a[i], a[k]);// 用这个会出错，还在找原因，因该是和c++自带的同名函数撞了
-		mySwap(a[i], a[k]);
+		swap(a[i], a[k]);// 用这个会出错，还在找原因，因该是和c++自带的同名函数撞了
+		// 哦不是这个原因，是写的swap写智障了。，。
+		/*int tmp = a;
+		a = b;
+		b = a;*/
+		//mySwap(a[i], a[k]);
 		//int tmp = a[i];
 		//a[i] = a[k];
 		//a[k] = tmp;

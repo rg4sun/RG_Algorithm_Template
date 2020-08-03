@@ -16,6 +16,10 @@ void insertSortTest() {
 	showArray(a, 7);
 }
 
+void bubbleSortTest() {
+
+}
+
 int main() {
 	//selectSort();
 	insertSortTest();

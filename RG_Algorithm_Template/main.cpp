@@ -17,7 +17,7 @@ void insertSortTest() {
 }
 
 void bubbleSortTest() {
-
+	int  a[7] = { 7,131,1445,132,90,99,1 };
 }
 
 int main() {

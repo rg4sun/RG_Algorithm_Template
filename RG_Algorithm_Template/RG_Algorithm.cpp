@@ -73,26 +73,27 @@ void insertSort(int a[], int len, bool reverse)
 	}
 }
 
-void generateP(int index, int n, int p[], bool hashTabe[])
+void generateP(int index, int n, int p[], bool hashTabe[], int &count)
 {
 	if (index == n + 1) {
 		for (int i = 1; i <= n; i++) {
 			printf("%d", p[i]);
 		}
 		printf("\n");
+		count++;
 		return;
 	}
 	for (int x = 1; x <= n; x++) {
 		if (hashTabe[x] == false) {
 			p[index] = x;
 			hashTabe[x] = true;
-			generateP(index + 1, n, p, hashTabe); // 这里进入递归
+			generateP(index + 1, n, p, hashTabe, count); // 这里进入递归
 			hashTabe[x] = false; // 处理完 p[index]的子问题，还原hash表
 		}
 	}
 }
 
-void showFullPermutation(int n)
+int showFullPermutation(int n) // 返回 排列 数量
 {
 	int* p = (int*)malloc(n+1 * sizeof(int)); // 因为要取到n号下标
 	bool* hashTabe = (bool*)malloc(n+1 * sizeof(bool));// 因为要取到n号下标
@@ -100,5 +101,7 @@ void showFullPermutation(int n)
 		hashTabe[i] = false;
 		p[i] = 0;//顺手也把排列数组置为0吧
 	}
-	generateP(1, n, p, hashTabe);// 调用 递归函数
+	int count = 0;// 初始要置为0而不是1，因为循环最后一次 即使输出了最后一个排列，还要进行count++
+	generateP(1, n, p, hashTabe, count);// 调用 递归函数
+	return count;
 }

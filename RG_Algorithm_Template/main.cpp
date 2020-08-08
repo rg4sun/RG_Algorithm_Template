@@ -22,7 +22,8 @@ void bubbleSortTest() {
 
 int main() {
 	//selectSort();
-	insertSortTest();
-
+	//insertSortTest();
+	//showFullPermutation(3);
+	printf("\n%d", showFullPermutation(3));
 	return 0;
 }

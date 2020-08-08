@@ -24,6 +24,6 @@ int main() {
 	//selectSort();
 	//insertSortTest();
 	//showFullPermutation(3);
-	printf("\n%d", showFullPermutation(3));
+	printf("\n%d", showFullPermutation(5));
 	return 0;
 }

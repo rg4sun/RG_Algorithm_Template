@@ -42,7 +42,7 @@ void selectSort(int a[], int len, bool reverse) {// reverse默认为false，升序排序
 					k = j;
 			}
 		}
-		swap(a[i], a[k]);// 用这个会出错，还在找原因，因该是和c++自带的同名函数撞了
+		swap(a[i], a[k]);// 用这个会出错，还在找原因，应该是和c++自带的同名函数撞了
 		// 哦不是这个原因，是写的swap写智障了。，。
 		/*int tmp = a;
 		a = b;
@@ -74,7 +74,7 @@ void insertSort(int a[], int len, bool reverse)
 }
 
 void generateP(int index, int n, int p[], bool hashTabe[], int &count)
-{
+{// 递归函数，生成每一个排列数
 	if (index == n + 1) {
 		for (int i = 1; i <= n; i++) {
 			printf("%d", p[i]);

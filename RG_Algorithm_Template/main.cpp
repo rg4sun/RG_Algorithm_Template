@@ -20,6 +20,14 @@ void bubbleSortTest() {
 	int  a[7] = { 7,131,1445,132,90,99,1 };
 }
 
+
+void binarySearchTest() {
+	int a[7] = { 7,131,1445,132,90,99,1 };
+	insertSort(a, 7, true);
+	if(binarySearch())
+	
+}
+
 int main() {
 	//selectSort();
 	//insertSortTest();

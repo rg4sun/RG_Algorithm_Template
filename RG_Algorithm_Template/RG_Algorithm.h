@@ -15,4 +15,4 @@ void insertSort(int a[], int len, bool reverse = false);
 void generateP(int index, int n, int p[], int hashTabe[], int &count);
 int showFullPermutation(int n);
 
-int binarySearch(int a[], int element);
+int binarySearch(int a[], int n, int element);

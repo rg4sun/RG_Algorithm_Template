@@ -25,6 +25,7 @@ void isInArray(int ele, int result) {
 		printf("element %d is not in the array!\n", ele);
 	else
 		printf("element %d is in the array, index is %d !", ele, result);
+	return;
 }
 
 void binarySearchTest() {
@@ -40,6 +41,7 @@ int main() {
 	//selectSort();
 	//insertSortTest();
 	//showFullPermutation(3);
-	printf("\n%d", showFullPermutation(5));
+	//printf("\n%d", showFullPermutation(5));
+	binarySearchTest();
 	return 0;
 }

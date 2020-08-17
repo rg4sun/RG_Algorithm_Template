@@ -105,3 +105,20 @@ int showFullPermutation(int n) // 返回 排列 数量
 	generateP(1, n, p, hashTabe, count);// 调用 递归函数
 	return count;
 }
+
+int binarySearch(int a[], int n, int element)
+// n 为数组元素个数，element为待查找的元素，找到则返回索引，否则返回-1
+// a[]要求是升序的数组
+{
+	int left = 0, right = n - 1;
+	while (left <= right) {
+		int mid = (right - left) / 2;
+		if (element < a[mid])
+			right = mid - 1;
+		else if (element > a[mid])
+			left = mid + 1;
+		else
+			return mid;
+	}
+	return -1;
+}

@@ -24,13 +24,13 @@ void isInArray(int ele, int result) {
 	if (result == -1)
 		printf("element %d is not in the array!\n", ele);
 	else
-		printf("element %d is in the array, index is %d !", ele, result);
+		printf("element %d is in the array, index is %d !\n", ele, result);
 	return;
 }
 
 void binarySearchTest() {
 	int a[7] = { 7,131,1445,132,90,99,1 };
-	insertSort(a, 7); //默认升序，如果写true就是降序，降序的话binarySearch就会出错 
+	insertSort(a, 7); //默认升序，如果写true就是降序，降序的话binarySearch就会出错（默认需要一个升序数组）
 	isInArray(99, binarySearch(a, 7, 99));
 	isInArray(999, binarySearch(a, 7, 999));
 

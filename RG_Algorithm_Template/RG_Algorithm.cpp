@@ -112,7 +112,7 @@ int binarySearch(int a[], int n, int element)
 {
 	int left = 0, right = n - 1;
 	while (left <= right) {
-		int mid = (right + left) / 2;
+		int mid = (right + left) / 2; // 注意这里是加号。，。
 		if (element < a[mid])
 			right = mid - 1;
 		else if (element > a[mid])
